@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: ComicSans;
+	font-style: normal;
+	font-weight: 400;
+	src: local("ComicSans"), url(shriftiki/ComicSans.woff2) format("woff2"), url(shriftiki/ComicSans.woff) format("woff")
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1;
+	background-color: #25282A;
+	font-family: ComicSans, sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.pshe-meme-listalka {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 20px 0px;
+	max-width: 630px;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.pshe-meme-listalka .agniaogonek-tv {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+}
+
+.pshe-meme-listalka .agniaogonek-comments {
+	grid-column: 1 / span 1;
+	grid-row: 2 / span 1;
+}
+
+.pshe-meme-listalka .agniaogonek-tv,
+.pshe-meme-listalka .agniaogonek-comments {
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+.pshe-meme-listalka i {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+}
+
+/* SLIDES */
+.pshe-meme-listalka .agniaogonek-tv .agniaogonek-tv__memchik {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+	font-size: 16px;
+}
+
+/* NAVIGATION */
+.pshe-meme-listalka .pshe-meme-listalka__pipki {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 15px;
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+	width: 100%;
+	padding: 10px 0;
+	background-color: #25282A;
+}
+
+.pshe-meme-listalka__pipka {
+	position: relative;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	text-decoration: none;
+	border-radius: 50%;
+	background: #71ABFF;
+	border: 2px solid transparent;
+	transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.pshe-meme-listalka__pipka:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 24px;
+	height: 24px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pshe-meme-listalka .pshe-meme-listalka__pipki > a + a {
+	background: #71ABFF;
+	/* Dim all but first */
+}
+
+.pshe-meme-listalka .pshe-meme-listalka__pipki > a:hover {
+	border-color: #71ABFF;
+	background: transparent;
+}
+
+/* ACTIVE NAVIGATION ANCHOR */
+.pshe-meme-listalka > s:target ~ .pshe-meme-listalka__pipki > * {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#memasik1:target ~ .pshe-meme-listalka__pipki > *:nth-child(1) {
+	background: rgba(255, 255, 255, 1);
+}
+
+#memasik2:target ~ .pshe-meme-listalka__pipki > *:nth-child(2) {
+	background: rgba(255, 255, 255, 1);
+}
+
+#memasik3:target ~ .pshe-meme-listalka__pipki > *:nth-child(3) {
+	background: rgba(255, 255, 255, 1);
+}
+
+#memasik4:target ~ .pshe-meme-listalka__pipki > *:nth-child(4) {
+	background: rgba(255, 255, 255, 1);
+}
+
+.agniaogonek-tv__comment {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 40px;
+	color: #fff;
+}
+
+/* SLIDER ANIMATION POSITIONS */
+#memasik1:target ~ .agniaogonek-tv,
+#memasik1:target ~ .agniaogonek-comments {
+	transform: translateX(0%);
+	-webkit-transform: translateX(0%);
+}
+
+#memasik2:target ~ .agniaogonek-tv,
+#memasik2:target ~ .agniaogonek-comments {
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+}
+
+#memasik3:target ~ .agniaogonek-tv,
+#memasik3:target ~ .agniaogonek-comments {
+	transform: translateX(-200%);
+	-webkit-transform: translateX(-200%);
+}
+
+#memasik4:target ~ .agniaogonek-tv,
+#memasik4:target ~ .agniaogonek-comments {
+	transform: translateX(-300%);
+	-webkit-transform: translateX(-300%);
+}
