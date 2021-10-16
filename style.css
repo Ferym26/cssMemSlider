@@ -64,7 +64,6 @@ img {
 	grid-row: 1 / span 1;
 }
 
-/* SLIDES */
 .pshe-meme-listalka .agniaogonek-tv .agniaogonek-tv__memchik {
 	display: inline-block;
 	vertical-align: top;
@@ -73,7 +72,6 @@ img {
 	font-size: 16px;
 }
 
-/* NAVIGATION */
 .pshe-meme-listalka .pshe-meme-listalka__pipki {
 	position: relative;
 	display: flex;
@@ -112,7 +110,6 @@ img {
 
 .pshe-meme-listalka .pshe-meme-listalka__pipki > a + a {
 	background: #71ABFF;
-	/* Dim all but first */
 }
 
 .pshe-meme-listalka .pshe-meme-listalka__pipki > a:hover {
@@ -120,7 +117,6 @@ img {
 	background: transparent;
 }
 
-/* ACTIVE NAVIGATION ANCHOR */
 .pshe-meme-listalka > s:target ~ .pshe-meme-listalka__pipki > * {
 	background: rgba(255, 255, 255, 0.5);
 }
@@ -151,7 +147,6 @@ img {
 	color: #fff;
 }
 
-/* SLIDER ANIMATION POSITIONS */
 #memasik1:target ~ .agniaogonek-tv,
 #memasik1:target ~ .agniaogonek-comments {
 	transform: translateX(0%);
